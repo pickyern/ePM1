@@ -1,0 +1,475 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<div class="card" id="page">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" crossorigin="anonymous">
+        <link href="../Css/formstyle.css" rel="stylesheet" />
+        <script src="pdfreference.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+       
+    </head>
+
+   
+    <div class="header">
+        <h1>
+            <img src="../getsitelogo%20(1).png" height=60 width=130 style="vertical-align:middle;" />
+            <img src="../I4.0logo.png" height=50 width=60 alt="Description of the image" style="vertical-align: middle;">
+            <h4>TDK ELECTRONICS MALAYSIA </h4>
+            <!--<span>TDK ELECTRONICS MALAYSIA <span>-->
+         
+        </h1>
+    </div>
+
+   
+
+    <body style="text-align:center;padding :0px">
+        <!--javascript for loading uplaoded image-->
+        <script>
+            var loadFile = function (event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+
+        <style>
+            textarea {
+                width: 100%;
+                height: 100px;
+                padding: 12px 20px;
+                box-sizing: border-box;
+                border: none;
+                background-color: #f8f8f8;
+                font-size: 12px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                color: blue;
+                resize: none;
+            }
+        </style>
+
+        <style>
+            table {
+                width: 95%;
+                border-collapse: collapse;
+                border: 1px solid #ddd;
+            }
+        </style>
+
+        <style>
+            /* The container */
+            .container {
+                display: block;
+                position: relative;
+                padding-left: 5px;
+                margin-top: 20px;
+                margin-bottom: 30px;
+                cursor: pointer;
+                font-size: 13px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+                /* Hide the browser's default checkbox */
+                .container input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+            /* Create a custom checkbox */
+            .checkmark {
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-left: 5px;
+                height: 20px;
+                width: 20px;
+                background-color: #eee;
+            }
+            /* On mouse-over, add a grey background color */
+            .container:hover input ~ .checkmark {
+                background-color: #ccc;
+            }
+            /* When the checkbox is checked, add a blue background */
+            .container input:checked ~ .checkmark {
+                background-color: #2196F3;
+            }
+            /* Create the checkmark/indicator (hidden when not checked) */
+            .checkmark:after {
+                content: "";
+                position: absolute;
+                display: none;
+            }
+            /* Show the checkmark when checked */
+            .container input:checked ~ .checkmark:after {
+                display: block;
+            }
+            /* Style the checkmark/indicator */
+            .container .checkmark:after {
+                left: 7px;
+                top: 3px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 3px 3px 0;
+                -webkit-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+        </style>
+
+        <style>
+            .checkImg {
+                border: 0;
+                width: 100%;
+                height: auto;
+            }
+        </style>
+
+        <div class="col-md-12">
+
+            <div class="card-header bg-transparent header-elements-inline">
+                <div class="card-header bg-transparent header-elements-inline">
+                    <h6 class="card-title">ePM Checklist (DAILY) : Laser Machine</h6>
+                    <table>
+                        <tr>
+                            <th>Item#</th>
+                            <th>Action List</th>
+                            <th>Description</th>
+                            <th>Pictures</th>
+                            <th>Checkbox</th>
+                            <th>Remarks</th>
+                            <th>Attachment</th>
+                        </tr>
+                        <tr>
+                            <td>1.</td>
+                            <td>Check the ventilation fans functioning properly</td>
+                            <td>To ensure fan clean and in good condition</td>
+                            <td><img src="../Photos Form/LaserMachine/1.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>2.</td>
+                            <td>Check the water pump for any abnormal noise</td>
+                            <td>To ensure Pump no vibration </td>
+                            <td><img src="../Photos Form/LaserMachine/2.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>3.</td>
+                            <td>Check the  Safety Door sensor and its functionality</td>
+                            <td>Sensor Functionaly with lock condition during MC start</td>
+                            <td><img src="../Photos Form/LaserMachine/3.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td>Check the emergency stop button functionality</td>
+                            <td>Press and release in functionaly</td>
+                            <td><img src="../Photos Form/LaserMachine/4.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td>Homing all the axis for working station at the start of the shift</td>
+                            <td>All Axis in Zero Condition before MC running.</td>
+                            <td><img src="../Photos Form/LaserMachine/5.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td>Check the machine setting as per WI</td>
+                            <td>To Ensure MC program write selected according to version</td>
+                            <td><img src="../Photos Form/LaserMachine/6.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td>Check the condition of station tooling</td>
+                            <td>Holder Jig slot are fit and not loose  (3 point)</td>
+                            <td><img src="../Photos Form/LaserMachine/7.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td>Check the water level in the chiller</td>
+                            <td>Ensure the water level not below max water level point  </td>
+                            <td><img src="../Photos Form/LaserMachine/8.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>9.</td>
+                            <td>Clean the protection lens </td>
+                            <td>Ensure use the tissue given (sensitive lens)</td>
+                            <td><img src="../Photos Form/LaserMachine/9.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="130" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10.</td>
+                            <td>Check the water box cover</td>
+                            <td>Ensure no crack and leakage </td>
+                            <td><img src="../Photos Form/LaserMachine/10.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>11.</td>
+                            <td>Check the seal performance of the gas tubes - No Leakages observed</td>
+                            <td>No leakage(hose area) after confirm performance</td>
+                            <td><img src="../Photos Form/LaserMachine/11.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.</td>
+                            <td>Check the alignment of the laser program</td>
+                            <td>Ensure 1st  point laser area in center position before run</td>
+                            <td><img src="../Photos Form/LaserMachine/12.PNG" alt="" class="checkImg"></td>
+                            <td>
+                                <label class="container">
+                                    Good
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="container">
+                                    PM Alert
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                            </td>
+                            <td><textarea></textarea></td>
+                            <td>
+                                <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)" style="display: none;">
+                                <label for="file" style="cursor: pointer;">Upload</label>
+                                <img id="output" width="120" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+</div>
+
+        <div id="mybutton">
+            <div class="col-md-12 text-right mb-3">
+                <button class="btn btn-primary" id="download">Submit</button>
+            </div>
+        </div>
+
+ </body>
+
+    <style>
+        .btn btn-primary {
+            background-color: #0094ff;
+            color: white;
+            font-weight: bold;
+            padding: 10px 20px;
+            border-radius: 4px;
+            border-color: #46b8da;
+        }
+
+        #mybutton {
+            position: fixed;
+            bottom: -4px;
+            right: 10px;
+        }
+    </style>
+
+
+</html>
